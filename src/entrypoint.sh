@@ -11,6 +11,10 @@ then
     echo "PostgreSQL started"
 fi
 
+if [ ! -d 'logs' ]; then
+    mkdir 'logs'
+fi
+
 python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic --no-input

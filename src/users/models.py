@@ -51,8 +51,7 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
         self.is_active = False
         self.deleted_at = timezone.now()
         self.save()
-        if self.customer_profile.is_active:
-            self.customer_profile.delete()
+
 
     def __str__(self):
         return f'{self.email}'
