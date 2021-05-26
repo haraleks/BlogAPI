@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog_api.apps.BlogApiConfig',
     'rest_framework',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'drf_yasg',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,30 @@ STATICFILES_DIRS = []
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'debug.log'),
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
