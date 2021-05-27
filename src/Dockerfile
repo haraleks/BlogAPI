@@ -9,8 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Add additional alpine download url in dockerfile
-RUN echo -e "http://dl-4.alpinelinux.org/alpine/v3.12/main\nhttp://dl-4.alpinelinux.org/alpine/v3.12/community" > /etc/apk/repositories && \
-    echo -e "http://dl-2.alpinelinux.org/alpine/v3.12/main\nhttp://dl-2.alpinelinux.org/alpine/v3.12/community" > /etc/apk/repositories
+RUN echo -e "http://dl-4.alpinelinux.org/alpine/v3.12/main\nhttp://dl-4.alpinelinux.org/alpine/v3.12/community" > /etc/apk/repositories
 
 # install psycopg2 dependencies
 RUN apk update \
