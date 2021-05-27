@@ -15,6 +15,7 @@ RUN echo -e "http://dl-4.alpinelinux.org/alpine/v3.12/main\nhttp://dl-4.alpineli
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev mariadb-dev
 
+RUN apk add py-cryptography
 #openssl
 RUN apk add --no-cache libressl-dev  libffi-dev
 RUN apk upgrade --update-cache --available && apk add openssl && rm -rf /var/cache/apk/*
