@@ -40,6 +40,15 @@ Install docker <https://docs.docker.com/engine/install/>_
 
     make
 
+**Create super user**
+    
+    make sh
+    python manage.py create_super_user
+
+    login super@user.do
+    pass 12312300
+    
+
 **Main modules project:**
 
 BlogAPI
