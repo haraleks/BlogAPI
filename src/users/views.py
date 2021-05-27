@@ -19,10 +19,10 @@ class UserRegistration(GenericViewSet, CreateModelMixin):
                          operation_description='Register user',
                          responses={201: UserRegistrationSerializer})
     def create(self, request, *args, **kwargs):
-        serializer = UserRegistrationSerializer(data=request.data)
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        user_model = serializer.save()
-        show_serializer = self.get_serializer(user_model)
+        instance = serializer.save()
+        show_serializer = self.get_serializer(instance)
         return Response(show_serializer.data, status=status.HTTP_201_CREATED)
 
     def get_serializer_context(self):
@@ -32,6 +32,7 @@ class UserRegistration(GenericViewSet, CreateModelMixin):
 
 
 class ChangePasswordUser(GenericViewSet, UpdateModelMixin):
+    serializer_class = ChangePasswordUserSerializer
     permission_classes = [permissions.IsAuthenticated]
     queryset = User.objects.all()
 
@@ -40,9 +41,9 @@ class ChangePasswordUser(GenericViewSet, UpdateModelMixin):
                          responses={200: "'status': 'success', 'message': 'Password updated successfully'"})
     def update(self, request, *args, **kwargs):
         instance = request.user
-        serializer = ChangePasswordUserSerializer(instance, data=request.data,
-                                                  context={"request": self.request})
-        if serializer.is_valid(raise_exception=True):
-            response = serializer.save()
+        serializer = self.get_serializer(instance, data=request.data,
+                                         context={"request": self.request})
+        serializer.is_valid(raise_exception=True)
+        instance = serializer.save()
 
-        return Response(response)
+        return Response(instance)
