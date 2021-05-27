@@ -10,7 +10,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Add additional alpine download url in dockerfile
 RUN echo -e "http://dl-4.alpinelinux.org/alpine/v3.12/main\nhttp://dl-4.alpinelinux.org/alpine/v3.12/community" > /etc/apk/repositories
-RUN nslookup pypi.org
+
 # install psycopg2 dependencies
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev mariadb-dev
