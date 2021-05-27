@@ -196,3 +196,85 @@ Traceback (most recent call last):
 TypeError: __init__() got an unexpected keyword argument 'status'
 Bad Request: /api/v1/create_user/
 Not Found: /favicon.ico
+Internal Server Error: /api/v1/change_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/users/views.py", line 46, in update
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/serializers.py", line 220, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/serializers.py", line 423, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+Forbidden: /api/v1/change_password/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/change_password/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/change_password/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/change_password/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/change_password/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/change_password/
+Forbidden: /api/v1/create_user/
+Forbidden: /api/v1/create_user/
+Bad Request: /api/v1/change_password/
+Method Not Allowed: /api/v1/create_user/
+Bad Request: /api/v1/change_password/
+Method Not Allowed: /api/v1/create_user/
+Bad Request: /api/v1/change_password/
+Method Not Allowed: /api/v1/create_user/
+Bad Request: /api/v1/change_password/
+Method Not Allowed: /api/v1/create_user/
+Bad Request: /api/v1/change_password/
+Method Not Allowed: /api/v1/create_user/
+Bad Request: /api/v1/change_password/
+Method Not Allowed: /api/v1/create_user/
+Internal Server Error: /api/v1/change_password/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/users/views.py", line 46, in update
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/serializers.py", line 220, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/serializers.py", line 423, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/

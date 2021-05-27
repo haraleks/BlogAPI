@@ -15,5 +15,5 @@ as_view_with_pk = {
 
 urlpatterns = [
     path('create_user/', UserRegistration.as_view({'post': 'create'}), name='create_user'),
-    path('change_password/', ChangePasswordUser.as_view({'put': 'update'}), name='customer_pass')
+    path('change_password/', ChangePasswordUser.as_view({'put': 'update'}), name='change_pass')
 ]

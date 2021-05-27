@@ -19,7 +19,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         if attrs['password'] != attrs['password2']:
             raise serializers.ValidationError({"password": ["Password doesn't match"]})
-        return super().validate(attrs)\
+        return super().validate(attrs)
 
 
 class ChangePasswordUserSerializer(serializers.Serializer):
@@ -33,6 +33,7 @@ class ChangePasswordUserSerializer(serializers.Serializer):
             raise serializers.ValidationError("Old password is not the same")
         if attrs['new_password'] == attrs['old_password']:
             raise serializers.ValidationError("You entered your old password")
+        return super().validate(attrs)
 
     def update(self, instance, validated_data):
         user = self.context['request'].user
