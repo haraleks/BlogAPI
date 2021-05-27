@@ -6,6 +6,7 @@ from rest_framework.test import (APIClient, APITestCase,
                                  URLPatternsTestCase)
 from rest_framework_simplejwt.tokens import AccessToken
 
+from blog_api.models import BlogPost
 
 SIMPLE_JWT = settings.SIMPLE_JWT
 
@@ -16,6 +17,7 @@ class InitClass(APITestCase, URLPatternsTestCase):
 
     urlpatterns = [
         path('api/v1/', include('users.urls')),
+        path('api/v1/', include('blog_api.urls')),
     ]
 
     def create_user(self):
@@ -47,3 +49,7 @@ class InitClass(APITestCase, URLPatternsTestCase):
     def login_user_model(self, user):
         access = AccessToken.for_user(user)
         return self.login_user(access)
+
+    def create_blog_post(self, user):
+        blog, _ = BlogPost.objects.get_or_create(title=self.fake.name(), text=self.fake.text(), created_by=user)
+        return blog
