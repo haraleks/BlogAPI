@@ -278,3 +278,239 @@ Traceback (most recent call last):
 AssertionError: .validate() should return the validated data
 Method Not Allowed: /api/v1/create_user/
 Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/src/djangoBlogAPI/urls.py", line 42, in <module>
+    path('api/v1/', include('blog_api/urls')),
+  File "/usr/local/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'blog_api/urls'
+Internal Server Error: /static/admin/css/fonts.css
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.8/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.8/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/src/djangoBlogAPI/urls.py", line 42, in <module>
+    path('api/v1/', include('blog_api/urls')),
+  File "/usr/local/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'blog_api/urls'
+Not Found: /
+Not Found: /
+Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/generators.py", line 246, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/generators.py", line 404, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/generators.py", line 446, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/base.py", line 437, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/field.py", line 124, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/openapi.py", line 688, in setdefault
+    ret = maker()
+  File "/usr/local/lib/python3.8/site-packages/drf_yasg/inspectors/field.py", line 93, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/usr/local/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/serializers.py", line 349, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/serializers.py", line 1009, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class BlogPostSerializers missing "Meta.model" attribute
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Not Found: /
+Not Found: /api/v1/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blogs/1/
+Internal Server Error: /api/v1/blogs/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/usr/local/lib/python3.8/site-packages/rest_framework/generics.py", line 88, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+AssertionError: Expected view BlogPostViews to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Not Found: /api/v1/blogs/
+Not Found: /api/v1/
+Not Found: /
+Not Found: /
+Not Found: /api/v1/blogs/
+Not Found: /api/v1/blogs/1/
+Not Found: /api/v1/blogs/blog_post/1/
+Not Found: /api/v1/blogs/ blog_posts/1/
+Unauthorized: /api/v1/blogs/blog_posts/1/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Not Found: /api/v1/blogs/
+Not Found: /api/v1/
+Not Found: /api/v1/blogs/
+Not Found: /
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Not Found: /
+Not Found: /api/v1/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Unauthorized: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Bad Request: /api/v1/blog_posts/
+Method Not Allowed: /api/v1/create_user/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /
