@@ -1,5 +1,5 @@
 ############################
-FROM python:3.8
+FROM python:3.8.3-alpine
 
 # set work directory
 WORKDIR /usr/src/
